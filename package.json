@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/timeturnback/blogapp-node-react/issues"
   },
-  "homepage": "https://github.com/timeturnback/blogapp-node-react#readme"
+  "homepage": "https://github.com/timeturnback/blogapp-node-react#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
