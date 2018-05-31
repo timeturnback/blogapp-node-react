@@ -31,8 +31,9 @@ class ShowPost extends React.Component {
 class AddPost extends React.Component {
   constructor(props) {
     super(props);
+    this.addPost = this.addPost.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleSubjecChange = this.handleSubjectChange.bind(this);
+    this.handleSubjectChange = this.handleSubjectChange.bind(this);
     this.state = {
       title:'',
       subject:''
@@ -45,7 +46,7 @@ class AddPost extends React.Component {
     this.setState({body:e.target.value})
   }
   addPost(){
-    axios.post('/addPost', {
+    axios.post('/addpost', {
       title: this.state.title,
       subject: this.state.subject
     })
@@ -71,7 +72,7 @@ class AddPost extends React.Component {
       <textarea onChange={this.handleSubjectChange} className="form-control"  type="textarea" id="subject" placeholder="Subject" maxlength="140" rows="7"></textarea>
       </div>
 
-      <button type="button" id="submit" name="submit" className="btn btn-primary pull-right">Add Post</button>
+      <button type="button" onClick={this.addPost} id="submit" name="submit" className="btn btn-primary pull-right">Add Post</button>
       </form>
       </div>
       </div>

@@ -1,8 +1,10 @@
 var express = require("express");
+var session = require('express-session');
+
 var path = require("path");
 var bodyParser = require("body-parser");
 var user = require('./user');
-var session = require('express-session');
+var post = require('./post')
 
 var app = express();
 app.use(express.static(path.join(__dirname,"/html")));

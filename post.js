@@ -4,7 +4,7 @@ var url = 'mongodb://localhost:27017/';
 
 module.exports = {
     addPost: function(title, subject, callback){
-        MongoClient.connect(url, function(err, client) {
+        MongoClient.connect(url,{ useNewUrlParser: true }, function(err, client) {
             client.db('Blog').collection('post').insertOne( {
                 "title": title,
                 "subject": subject
