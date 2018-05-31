@@ -59,6 +59,12 @@ app.post('/addpost', function (req, res) {
   });
 });
 
+app.post('/getpost', function (req, res) {
+  post.getPost(function(result){
+    res.send(result);
+  });
+})
+
 app.listen(7777,function(){
     console.log("Started listening on port", 7777);
 });

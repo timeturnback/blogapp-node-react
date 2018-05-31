@@ -20,5 +20,15 @@ module.exports = {
                 client.close();
             });
         });
+    },
+    getPost: function(callback){
+        MongoClient.connect(url,{ useNewUrlParser: true }, function(err, client){
+           client.db('Blog').collection('post', function (err, collection) {
+            collection.find().toArray(function (err, list) {
+                callback(list);
+                client.close();
+            });
+        });
+       })
     }
 }
