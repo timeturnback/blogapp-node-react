@@ -17,8 +17,6 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
 
-
-
   </head>
 
   <body>
@@ -27,8 +25,10 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/home#/addPost">Add</a></li>
+            <li role="presentation" id="homeHyperlink"  class="active"><a href="#">Home</a></li>
+            <li role="presentation" id="addHyperLink"><a href="/home#/addPost">Add</a></li>
+            <li role="presentation" id="profileHyperlink"><a href="/home#/showProfile">Profile</a></li>
+            <li role="presentation" id="tagHyperlink"><a href="/home#/addTag">Tag</a></li>
             <li role="presentation"><a href="#">Logout</a></li>
           </ul>
         </nav>
